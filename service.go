@@ -7,9 +7,8 @@ import ("github.com/ant0ine/go-json-rest/rest"
 	"net/http"
 	"os")
 func main() {
-    // KDGOTTHESAUCE
     // try making database connection and query
-    db, err := sql.Open("mysql", "cloud.admin:sPEedY@8Hell@tcp(http://129.157.179.180:3000)/databasename")
+    db, err := sql.Open("mysql", "user:pass@tcp(ip:port)/databasename")
     defer db.Close()
 
     if err != nil {
@@ -29,7 +28,7 @@ func main() {
 	}
 	
 	// try making http request against sample site
-	response, err := http.Get("http://ip.jsontest.com/")
+	response, err := http.Get("http://129.157.179.180:3000/shield/300/300/blue/gocode")
 	if err != nil {
 		fmt.Println("Error making GET call")
 	} else {
