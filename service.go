@@ -29,7 +29,7 @@ func main() {
 	
 	// try making http request against sample site
 	for i := 0; i < 10; i++ {
-		response, err := http.Get("http://129.157.179.180:3000/fighters/shield/33/45/blue/KaddeOucif")
+		response, err := http.Get("http://129.157.179.180:3000/fighters/shield/45/y/blue/KaddeOucif")
 	if err != nil {
 		fmt.Println("Error making GET call")
 	} else {
@@ -42,7 +42,7 @@ func main() {
 		}
 		
 	}
-	} 
+	}
 	api := rest.NewApi()
 	api.Use(rest.DefaultDevStack...)
 	api.SetApp(rest.AppSimple(func(w rest.ResponseWriter, r *rest.Request) {
