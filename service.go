@@ -8,7 +8,7 @@ import ("github.com/ant0ine/go-json-rest/rest"
 	"os")
 func main() {
     // try making database connection and query
-    db, err := sql.Open("mysql", "user:pass@tcp(ip:port)/databasename")
+    db, err := sql.Open("mysql", "Captain:welcome1(http://129.157.179.180:3000)/deathstar")
     defer db.Close()
 
     if err != nil {
@@ -18,7 +18,7 @@ func main() {
 	
 	var xCoordinate int
 	var yCoordinate int
-	err = db.QueryRow("SELECT * from Sample").Scan(&xCoordinate, &yCoordinate)
+	err = db.QueryRow("SELECT * from SecretTable").Scan(&xCoordinate, &yCoordinate)
 	switch {
 	case err == sql.ErrNoRows:
 	case err != nil:
@@ -28,7 +28,7 @@ func main() {
 	}
 	
 	// try making http request against sample site
-	response, err := http.Get("http://129.157.179.180:3000/shield/300/300/blue/gocode")
+	response, err := http.Get("http://129.157.179.180:3000/shield/33/45/blue/gocode")
 	if err != nil {
 		fmt.Println("Error making GET call")
 	} else {
