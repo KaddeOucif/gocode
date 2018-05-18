@@ -8,7 +8,7 @@ import ("github.com/ant0ine/go-json-rest/rest"
 	"os")
 func main() {
     // try making database connection and query
-    db, err := sql.Open("mysql", "Captain:welcome1(http://129.157.179.180:3000)/deathstar")
+    db, err := sql.Open("mysql", "Captain:welcome1@tcp(http://129.157.179.180:3000)/deathstar")
     defer db.Close()
 
     if err != nil {
