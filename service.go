@@ -29,7 +29,7 @@ func main() {
 	
 	// try making http request against sample site
 	for i := 0; i < 10; i++ {
-		response, err := http.Get("http://129.157.179.180:3000/fighters/shield/45/i/blue/KaddeOucif")
+		response, err := http.Get("http://129.157.179.180:3000/fighters/shield/45/" + i + "/blue/KaddeOucif")
 	if err != nil {
 		fmt.Println("Error making GET call")
 	} else {
